@@ -30,7 +30,7 @@ export function SimpleDialog(props: SimpleDialogProps) {
 
     return (
         <Dialog onClose={handleClose} open={open} maxWidth="xs">
-            <Box p={4} sx={{ width: '280px', borderRadius: '4px', background: '#FFFFFF 0% 0% no-repeat padding-box'}}>
+            <Box pt={4} pl={4} pb={1} pr={2} sx={{ width: '280px', borderRadius: '4px', background: '#FFFFFF 0% 0% no-repeat padding-box'}}>
                 <Typography variant='h3' mb={2} fontWeight="600" color={getTypeColor()}>Subtitle</Typography>
                 <Typography variant="body1" mb={2} color="system.gray">
                 Body 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
