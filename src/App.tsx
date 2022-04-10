@@ -22,7 +22,9 @@ export default function App() {
   return (
     <Container>
       <Box sx={{ width: '100%', maxWidth: 500 }}>
-      <Link to="/home">Home Page</Link>
+      <Link to="/home-native-grid">Home Page built with native Grid CSS</Link>
+      <br/>
+      <Link to="/home-mui-grid">Home Page built with MUI Grid CSS</Link>
         <Typography m={1} variant="h1" color="system.teal" fontWeight="600" fontStyle="italic">
           h1. Heading
         </Typography>
