@@ -17,7 +17,7 @@ declare module '@mui/material/styles' {
   interface PaletteOptions {
     system: PaletteOptions['primary'];
   }
-  
+
   interface PaletteColor {
     white?: string;
     gray?: string;
@@ -55,6 +55,15 @@ declare module '@mui/material/styles' {
     error?: string;
   }
 }
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xs: true;
+    sm: false;
+    md: true;
+    lg: true;
+    xl: true;
+  }
+}
 
 // Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
@@ -69,42 +78,81 @@ declare module '@mui/material/Typography' {
 // A custom theme for this app
 const theme = createTheme({
   spacing: 6,
+  breakpoints: {
+    values: {
+      xs: 0,
+      md: 1024,
+      lg: 1366,
+      xl: 1920,
+    },
+  },
+  components: {
+    MuiPaper: {
+      defaultProps: {
+        elevation: 0,
+        square: false
+      },
+      styleOverrides: {
+        rounded: {
+          borderRadius: '10px'
+        },
+        root: {
+          overflow: "hidden"
+        }
+      }
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          maxWidth: '1248px'
+        }
+      }
+    }
+  },
   typography: {
     fontFamily: '"Open Sans", sans-serif',
     h1: {
       fontSize: 30,
-      lineHeight: '35px'
+      lineHeight: '35px',
+      letterSpacing: 0
     },
     h2: {
       fontSize: 24,
-      lineHeight: '35px'
+      lineHeight: '35px',
+      letterSpacing: 0
     },
     h3: {
       fontSize: 20,
-      lineHeight: '24px'
+      lineHeight: '24px',
+      letterSpacing: 0
     },
     h4: {
       fontSize: 18,
-      lineHeight: '24px'
+      lineHeight: '24px',
+      letterSpacing: 0
     },
     h5: undefined,
     h6: undefined,
     subtitle1: {
       fontSize: 16,
-      lineHeight: '22px'
+      lineHeight: '22px',
+      letterSpacing: 0
     },
     subtitle2: undefined,
     body1: {
       fontSize: 14,
-      lineHeight: '18px'
+      lineHeight: '18px',
+      letterSpacing: 0
     },
     body2: {
       fontSize: 12,
-      lineHeight: '18px'
+      lineHeight: '18px',
+      letterSpacing: 0
     },
     body3: {
       fontSize: 10,
-      lineHeight: '14px'
+      lineHeight: '14px',
+      letterSpacing: 0
     }
   },
   palette: {

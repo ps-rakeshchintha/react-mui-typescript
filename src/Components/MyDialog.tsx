@@ -6,16 +6,15 @@ import { Box } from '@mui/material';
 
 export interface SimpleDialogProps {
     open: boolean;
-    selectedValue: string;
-    onClose: (value: string) => void;
+    onClose: () => void;
     type: string;
 }
 
 export function SimpleDialog(props: SimpleDialogProps) {
-    const { onClose, selectedValue, open, type } = props;
+    const { onClose, open, type } = props;
 
     const handleClose = () => {
-        onClose(selectedValue);
+        onClose();
     };
 
     const getTypeColor = () =>{

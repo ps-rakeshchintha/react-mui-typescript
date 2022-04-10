@@ -2,27 +2,27 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { SimpleDialog } from './Components/Dialog';
+import { SimpleDialog } from './Components/MyDialog';
 import { Button } from '@mui/material';
 
-const emails = ['username@gmail.com', 'user02@gmail.com'];
+import { Link } from "react-router-dom";
 
 export default function App() {
   const [open, setOpen] = React.useState(false);
   const [type, setType] = React.useState("default");
-    const [selectedValue, setSelectedValue] = React.useState(emails[1]);
 
     const handleClickOpen = (type: string) => {
         setOpen(true);
         setType(type)
     };
 
-    const handleClose = (value: string) => {
+    const handleClose = () => {
         setOpen(false);
     };
   return (
-    <Container maxWidth="sm">
+    <Container>
       <Box sx={{ width: '100%', maxWidth: 500 }}>
+      <Link to="/home">Home Page</Link>
         <Typography m={1} variant="h1" color="system.teal" fontWeight="600" fontStyle="italic">
           h1. Heading
         </Typography>
@@ -68,7 +68,6 @@ export default function App() {
                 Open Alert dialog
             </Button>
             <SimpleDialog
-                selectedValue={selectedValue}
                 open={open}
                 onClose={handleClose}
                 type={type}
