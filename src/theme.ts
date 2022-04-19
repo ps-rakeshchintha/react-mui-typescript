@@ -13,9 +13,11 @@ declare module '@mui/material/styles' {
 
   interface Palette {
     system: Palette['primary'];
+    grayscale: Palette['primary'];
   }
   interface PaletteOptions {
     system: PaletteOptions['primary'];
+    grayscale: PaletteOptions['primary'];
   }
 
   interface PaletteColor {
@@ -35,6 +37,12 @@ declare module '@mui/material/styles' {
     grassGreen?: string;
     backgroundGray?: string;
     error?: string;
+    gray600?: string;
+    gray500?: string;
+    gray400?: string;
+    gray300?: string;
+    gray200?: string;
+    gray100?: string;
   }
   interface SimplePaletteColorOptions {
     white?: string;
@@ -53,6 +61,12 @@ declare module '@mui/material/styles' {
     grassGreen?: string;
     backgroundGray?: string;
     error?: string;
+    gray600?: string;
+    gray500?: string;
+    gray400?: string;
+    gray300?: string;
+    gray200?: string;
+    gray100?: string;
   }
 }
 declare module '@mui/material/styles' {
@@ -173,7 +187,12 @@ const theme = createTheme({
       mossGreen: '#7AB800',
       grassGreen: '#34B233',
       gray: '#333333',
-      error: '#D9553D'
+      error: '#D9553D',
+    },
+    grayscale: {
+      main: "#333333",
+      gray500: "#cccccc",
+      gray100: "#F7F7F7"
     },
     error: {
       main: red.A400,

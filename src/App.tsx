@@ -6,6 +6,7 @@ import { SimpleDialog } from './Components/MyDialog';
 import { Button } from '@mui/material';
 
 import { Link } from "react-router-dom";
+import InternationalNumber from './Components/InternationalNumber';
 
 export default function App() {
   const [open, setOpen] = React.useState(false);
@@ -75,6 +76,9 @@ export default function App() {
                 type={type}
             />
         </div>
+      </Box>
+      <Box my={2}>
+        <InternationalNumber/>
       </Box>
     </Container>
   );
